@@ -1,0 +1,200 @@
+.header{
+    margin-bottom: 5em;
+}
+
+
+/*Форма авторизации*/
+.signin-container{
+    margin-top: 20%;
+}
+
+.login-wrapper, .password-wrapper{
+    position: relative;
+}
+
+.help-block--login, .help-block--password{
+    position: absolute;
+    top: 0.5em;
+    right: -25%;
+}
+
+.submit-btn-link{
+    display: block;
+}
+
+.warning{
+    border-radius: 5px;
+    border-bottom: 1px solid #EFE29E;
+    line-height: 4em;
+    text-align: center;
+    color: #DCA233;
+}
+
+
+
+
+
+.signin-info{
+    position: relative;
+    /*max-width: 150px;*/
+}
+
+.signin-info__login{
+    position: absolute;
+    top:0;
+    right: 0;
+    padding: 0;
+    margin: 10px 0px;
+}
+
+.signin-info__exit{
+    position: absolute !important;
+    top:100%;
+    right: 0;
+    margin-bottom: 10px;
+}
+
+.exit{
+    padding: 0 !important;
+}
+
+.logo__link{
+    height: 100%;
+    padding: 0;
+}
+
+.logo-img{
+    max-height: 70px;
+}
+
+
+.breadcrumb{
+    display: inline-block;
+    position: absolute;
+    float: left;
+    top: 50%;
+    max-width:  width: 50%;
+    margin: 0;
+    margin-top: -1em;
+}
+
+.main-container{
+    
+}
+
+.footer__content{
+    text-align: center;
+    margin-top: 1.4em;
+}
+
+.search-add-row{
+    margin-bottom: 2em;
+}
+
+.search-form{
+    width: 100%;
+}
+
+.wrapper-search__input{
+    width: 75%;
+        float: left;
+    margin-right: 1em;
+}
+
+.search__input{
+    width: 100% !important;
+}
+
+.search__btn{
+    float: left;
+    width: 10%;
+}
+
+.add-btn{
+    float: right;
+    margin: 8px 0px;
+    width: 141px;
+}
+
+.add-btn__link, .edit-btn__link{
+  display: inline-block;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+
+.add-btn__link:hover, .edit-btn__link:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.course-list{
+    list-style: none;
+}
+
+.course__item{
+    position: relative;
+    margin-bottom: 2em;
+}
+
+.item-name{
+    display: inline-block;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.item-duration{
+    display: inline-block;
+    float: left;
+    line-height: 3em;
+}
+
+
+.item-time{
+    float: right;
+    line-height: 3em;
+    padding-right: 2em;
+}
+
+.item__control{
+
+}
+
+.edit-btn, .delete-btn{
+    width: 141px;
+    margin-top: 1em;
+    float: right;
+}
+
+
+
+/*---Edit-course page ---*/
+.input-date{
+    width: 20%;
+}
+
+.input-duration{
+    width: 10%;
+    display: inline-block;
+}
+
+.all-authors-list{
+    padding-left: 0;
+}
+
+.selected-authors-list{
+    padding-right: 0;
+}
+
+.btn-toright{
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+    margin-bottom: 1em;
+}
+
+.btn-toleft{
+    width: 50%;
+    margin-right: 25%;
+    margin-left: 25%;
+}

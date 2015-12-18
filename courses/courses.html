@@ -1,0 +1,55 @@
+
+
+            <div class="row search-add-row">
+                <div class="col-md-8 search-col clearfix">
+                    <form class="navbar-form navbar-left search-form" role="search" ng-submit="searchCourses()">
+                      <div class="form-group wrapper-search__input">
+                        <input type="search" class="form-control search__input" placeholder="Search" ng-model="searchText">
+                        <!-- <input type="search" class="form-control search__input" placeholder="Search" ng-model="searchText"> -->
+                      </div>
+                      <button type="submit" class="btn btn-default search__btn">Найти</button>
+                    </form>
+                </div>
+              <div class="col-md-4 add-col">
+                <button type="button" class="btn btn-primary add-btn">
+                  <span class="glyphicon glyphicon-plus" aria-hidden="true"></span><a href="#/new_course" class="add-btn__link">Добавить курс</a>
+                </button>
+              </div>
+            </div>
+            <div>
+             <!--  <ul class="row course-list clearfix"  ng-repeat="course in courses | filter:searchText"> -->
+              <ul class="row course-list clearfix"  ng-repeat="course in courses">
+                  <li class="course__item clearfix">                       
+                    <div class="col-md-10 item__info pull-left clearfix">
+                      <div class="info__main row">
+                            <h2 class="item-name">{{course.title}}</h2>
+                            <span class="item-duration">{{course.duration}}</span>
+                            <time pubdate class="item-time">{{course.date | date:'dd.MM.yyyy'}}</time>
+                      </div>
+                      <div class="info__description">
+                        <p>{{course.description}}</p>
+                      </div>
+                    </div>
+                    <div class="col-md-2 item__control pull-right clearfix">
+                      <button type="button" class="btn btn-primary edit-btn" ng-click="editCourse(course.$id)"><span class="glyphicon glyphicon-pencil"></span><a href="#/{{course.$id}}">Редактировать</a></button>
+                      <button type="button" class="btn btn-primary delete-btn" data-target="#deleteModal" ng-click="confirmDelete(course.$id)"><span class="glyphicon glyphicon-remove"></span> Удалить</button>
+                    </div>
+                  </li>
+                </ul>
+                <!-- Modal -->
+                <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        <h4 class="modal-title" id="deleteModalLabel">Удалить этот курс?</h4>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+                        <button type="button" class="btn btn-primary" ng-click="deleteCourse()">Удалить</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+ 
