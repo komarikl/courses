@@ -18,21 +18,27 @@
             </div>
             <div>
              <!--  <ul class="row course-list clearfix"  ng-repeat="course in courses | filter:searchText"> -->
-              <ul class="row course-list clearfix"  ng-repeat="course in courses">
+              <ul class="row course-list clearfix"  ng-repeat="course in courses | filter: coursesFiltered">
                   <li class="course__item clearfix">                       
                     <div class="col-md-10 item__info pull-left clearfix">
                       <div class="info__main row">
                             <h2 class="item-name">{{course.title}}</h2>
-                            <span class="item-duration">{{course.duration}}</span>
+                            <span class="item-duration">{{course.duration | plurDuration}}</span>
                             <time pubdate class="item-time">{{course.date | date:'dd.MM.yyyy'}}</time>
                       </div>
                       <div class="info__description">
                         <p>{{course.description}}</p>
                       </div>
+                      <div class="info__authors">
+                        <span>Авторы:</span>
+                        <ul ng-repeat="author in course.authors">
+                          <li>{{author}}</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="col-md-2 item__control pull-right clearfix">
-                      <button type="button" class="btn btn-primary edit-btn" ng-click="editCourse(course.$id)"><span class="glyphicon glyphicon-pencil"></span><a href="#/{{course.$id}}">Редактировать</a></button>
-                      <button type="button" class="btn btn-primary delete-btn" data-target="#deleteModal" ng-click="confirmDelete(course.$id)"><span class="glyphicon glyphicon-remove"></span> Удалить</button>
+                      <button type="button" class="btn btn-primary edit-btn" ><span class="glyphicon glyphicon-pencil"></span><a href="#/{{course.$id}}" class="edit-btn__link">Редактировать</a></button>
+                      <button type="button" class="btn btn-primary delete-btn" ng-click="courses.$remove(course)"><span class="glyphicon glyphicon-remove"></span> Удалить</button>
                     </div>
                   </li>
                 </ul>

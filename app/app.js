@@ -2,7 +2,9 @@
 
 	angular.module('coursesApp', [
 	  'ngRoute',
-	  'firebase'])
+	  'firebase',
+	  'ngAnimate',
+	  'ui.bootstrap'])
 
 	.config(['$routeProvider', function($routeProvider) {
 	  $routeProvider
@@ -24,16 +26,11 @@
 	  .otherwise({redirectTo: '/signin'});
 	}])
 	.run(runApp)
-	// .value("modelCourses",{})
+
 	.controller("MainCtrl", MainCtrl)
 	
 
 	function runApp($http, $rootScope, $location){
-        // $http
-        //     .get('courses.json')
-        //     .success(function(data){
-        //         modelCourses.courses = data;
-        // });
 
         $rootScope.$on("$routeChangeStart", function(event, next, current) {
    			 if (!$rootScope.loggedIn) 
@@ -41,8 +38,6 @@
     		 }
    		 )}
 
-    function MainCtrl($scope){
-    	//$scope.courses = modelCourses;
+    function MainCtrl($scope, breadCrumbs){
+    	$scope.breadCrumbs = breadCrumbs;
    }
-
-  

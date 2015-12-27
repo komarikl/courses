@@ -1,3 +1,9 @@
+/*cloak*/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+
 .header{
     margin-bottom: 5em;
 }
@@ -32,7 +38,7 @@
 
 
 
-
+/*Header*/
 
 .signin-info{
     position: relative;
@@ -78,6 +84,10 @@
     margin-top: -1em;
 }
 
+
+
+
+/*Main*/
 .main-container{
     
 }
@@ -144,6 +154,7 @@
     padding: 0;
 }
 .item-duration{
+    padding-left: 1em;
     display: inline-block;
     float: left;
     line-height: 3em;
@@ -197,4 +208,8 @@
     width: 50%;
     margin-right: 25%;
     margin-left: 25%;
+}
+
+.edit-course__cancel-btn__link:hover, .edit-course__save-btn__link:hover{
+    text-decoration: none;
 }

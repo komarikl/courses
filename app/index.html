@@ -32,12 +32,12 @@
                     <img alt="CoursePortal" src="imgs/yoda.png" class="logo-img">
                 </a>
             </div>
-            <ol class="breadcrumb" ng-show="loggedIn">
+            <ol class="breadcrumb ng-cloak" ng-show="loggedIn">
               <li><a href="#/courses">Курсы</a></li>
-              <!-- <li class="active">{{course.id}}</li> -->
+              <li class="active">{{breadCrumbs.getTitle()}}</li>
             </ol>
-            <ul class="nav navbar-nav navbar-right signin-info" ng-show="loggedIn">
-                <li class="pull-right signin-info__login">{{OriginalUser}}</li>
+            <ul class="nav navbar-nav navbar-right signin-info ng-cloak" ng-show="loggedIn">
+                <li class="pull-right signin-info__login">{{originalUser}}</li>
                 <li class="pull-right signin-info__exit"><a href="#" class="exit">Выйти</a></li>
             </ul>
           </div>
@@ -63,19 +63,25 @@
       <script src="bower_components/jquery/dist/jquery.min.js"></script>
       <script src="bower_components/angular/angular.js"></script>
       <script src="bower_components/angular-route/angular-route.js"></script>
+      <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.3.js"></script>
+      <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
 <!-- Firebase -->
-<!-- <script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script> -->
+<script src="https://cdn.firebase.com/js/client/2.2.4/firebase.js"></script>
 <!-- AngularFire -->
-<!-- <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script> -->
+<script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
 
-      <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
-      <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script>
+<!--       // <script src="https://cdn.firebase.com/js/client/2.0.4/firebase.js"></script>
+      // <script src="https://cdn.firebase.com/libs/angularfire/0.8.0/angularfire.min.js"></script> -->
       <script src="app.js"></script>
       <script src="signin/signin.js"></script>
       <script src="courses/courses.js"></script>
+      <script src="courses/filters/plurDurationFilter.js"></script>
+      <script src="courses/services/breadCrumbs.js"></script>
+      <script src="courses/directives/selectDir/selectDir.js"></script>
       <script src="new_course/new_course.js"></script>
       <script src="edit_course/edit_course.js"></script>
       <script src="js/bootstrap.min.js"></script>
+      <script src="select.js"></script>
 
 
     

@@ -1,0 +1,25 @@
+              <div class="form-group">
+                <label for="selectAuthors" class="col-sm-2 control-label">Список авторов</label>
+                <div class="col-sm-10">
+                    <div class="col-sm-5 all-authors-list">
+                      <select multiple class="form-control" id="authors" ng-model="leftSelect">
+                      <option>Люк</option>
+                      <option>Чубака</option>
+                      <option>Вейдер</option>
+                      <option>Сириус</option>
+                      <option>Обиван</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-sm-2">
+                      <button type="button" class="btn btn-toright" ng-click="moveRight()"><span class="glyphicon glyphicon-menu-right" aria-hidden="true"></span></button>
+                      <button type="button" class="btn btn-toleft" ng-click="moveLeft()"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span></button>
+                    </div>
+
+                    <div class="col-sm-5 selected-authors-list">
+                      <select multiple class="form-control" ng-model="rightSelect">
+                     <option ng-repeat="el in courseAuthors" value="{{el}}">{{el}}</option>
+                      </select>
+                    </div>
+                </div>
+              </div>
